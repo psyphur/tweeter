@@ -1,0 +1,21 @@
+nav {
+  height: 120px;
+  width: 100vw;
+  background-color: #4056A1;
+  color: #ffffff;
+  padding: 1.5em 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav > span {
+  font-family: 'Bungee', sans-serif;
+  font-size: 42px;
+}
+
+#tweet-pulldown {
+  color: #ffff;
+  font-weight: 400;
+  text-decoration: none;
+}
