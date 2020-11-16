@@ -1,0 +1,38 @@
+.new-tweet > form > textarea {
+  text-decoration: none;
+  border: none;
+  outline: none;
+  resize: none;
+  background: none;
+  border-bottom: #494949 5px solid;
+  width: 100%;
+  padding: 0 0;
+  margin-bottom: 0.5em;
+  margin-top: 0.25em;
+}
+
+#submit-btn {
+  background-color: #4056A1;
+  border: none;
+  color: white;
+  font-family: 'Bungee', sans-serif;
+  padding: 5px 10px;
+  font-weight: 100;
+  text-decoration: none;
+}
+
+#submit-btn:hover {
+  background-color: #273564;
+}
+
+.new-tweet > form > #form-bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.counter {
+  font-family: 'Bungee', sans-serif;
+  font-size: 28px;
+}
