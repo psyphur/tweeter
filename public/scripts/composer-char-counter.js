@@ -1,8 +1,6 @@
 const $tweetInput = $('#tweet-text');
 
 $(document).ready(function() {
-  console.log("Char Counter JS Ready");
-
   $($tweetInput).on('keyup', function() {
     const $counter = $(this).parent().find(".counter");
     const value = $(this).val();
