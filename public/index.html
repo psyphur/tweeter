@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     type="text/css" />
 
+  <!-- FontAwesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" type="text/css">
+
   <!-- Google Font API Bungee && Source Sans Pro-->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link
@@ -20,6 +23,8 @@
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" ty[e="text/css" />
+  <link rel="stylesheet" href="/styles/tweet-article.css" ty[e="text/css" />
+
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -36,7 +41,7 @@
     <a href="" id="tweet-pulldown"><b>Write</b> a new tweet</a>
   </nav>
 
-  <header>
+  <header class="main-header">
     <div id="avatar">
       <img src="/images/profile-hex.png">
     </div>
@@ -58,6 +63,43 @@
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
+    </section>
+    <section>
+      <article  class="tweet-article">
+        <header>
+          <img src="https://i.imgur.com/nlhLi3I.png" alt="">
+          <div class="growable">Isaac</div>
+          <div class="username">@Bob</div>
+        </header>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et laudantium esse, unde nisi maiores facere.</p>
+        <div class="separator"></div>
+        <footer>
+          <label class="date-posted">10 days ago</label>
+          <label class="tweet-icons">
+            <i class="fas fa-flag"></i>
+            <i class="fas fa-retweet"></i>
+            <i class="fas fa-heart"></i>
+          </label>
+        </footer>
+      </article>
+      <article  class="tweet-article">
+        <header>
+          <img src="https://i.imgur.com/nlhLi3I.png" alt="">
+          <div class="growable">Isaac</div>
+          <div class="username">@Bob</div>
+        </header>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et laudantium esse, unde nisi maiores facere.</p>
+        <div class="separator"></div>
+        <footer>
+          <label class="date-posted">10 days ago</label>
+          <label class="tweet-icons">
+            <i class="fas fa-flag"></i>
+            <i class="fas fa-retweet"></i>
+            <i class="fas fa-heart"></i>
+          </label>
+        </footer>
+      </article>
+
     </section>
   </main>
   

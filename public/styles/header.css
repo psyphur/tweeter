@@ -1,4 +1,4 @@
-header {
+.main-header {
   height: 400px;
   width: 100%;
   display: flex;
@@ -10,7 +10,7 @@ header {
   background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
 }
 
-header > div > h2 {
+.main-header > div > h2 {
   color: #ffff;
 }
 
