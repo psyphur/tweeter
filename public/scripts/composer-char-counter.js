@@ -1,6 +1,6 @@
-const $tweetInput = $('#tweet-text');
-
 $(document).ready(function() {
+  const $tweetInput = $(document).find(".tweet-input");
+
   $($tweetInput).on('keyup', function() {
     const $counter = $(this).parent().find(".counter");
     const value = $(this).val();

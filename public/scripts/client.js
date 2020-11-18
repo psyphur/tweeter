@@ -46,8 +46,6 @@ function getDatePosted(datetime) {
   return Math.round(timeDifference / (1000 * 3600 * 24));
 }
 
-getDatePosted(1461116232227);
-
 const data = [
   {
     "user": {

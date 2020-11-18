@@ -11,7 +11,7 @@
   margin-top: 0.25em;
 }
 
-#submit-btn {
+.new-tweet > form > div > button {
   background-color: #4056A1;
   border: none;
   color: white;
@@ -21,11 +21,11 @@
   text-decoration: none;
 }
 
-#submit-btn:hover {
+.new-tweet > form > div > button:hover {
   background-color: #273564;
 }
 
-.new-tweet > form > #form-bottom {
+.new-tweet > form > div {
   display: flex;
   flex-direction: row;
   align-items: center;
