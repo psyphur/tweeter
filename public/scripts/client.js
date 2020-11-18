@@ -41,18 +41,21 @@ const createTweetElement = function(tweet) {
 
 const submitTweet = function() {
   const $submitForm = $(".submit-tweet");
+  const $input = $submitForm.find(".tweet-input");
+
   $submitForm.submit(function(e) {
-    e.preventDefault();
-    alert("submit called")
-    console.log($(this).serialize());
-    $.ajax({ 
-      method: 'POST',
-      url: "/tweets",
-      data: $(this).serialize(),
-    })
-    .then(function(data) {
-      console.log("success", data);
-    })
+    if ($input.val() !== "" && $input.val().length < 140) {
+      e.preventDefault();
+      $.ajax({ 
+        method: 'POST',
+        url: "/tweets",
+        data: $(this).serialize(),
+      })
+    } else {
+      e.preventDefault();
+      alert("input invalid");
+    }
+
   })
 }
 
