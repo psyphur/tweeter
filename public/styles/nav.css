@@ -16,19 +16,23 @@ nav > span {
   font-size: 42px;
 }
 
-nav > .new-tweet > .tweet-pulldown {
+nav > .show-new-tweet > .tweet-pulldown {
   color: #ffff;
   font-weight: 400;
   text-decoration: none;
 }
 
-nav > .new-tweet {
+nav > .show-new-tweet {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-nav > .new-tweet > i {
+nav > .show-new-tweet:hover {
+  cursor: pointer;
+}
+
+nav > .show-new-tweet > i {
   padding-top: 0.25em;
   color: rgb(71, 196, 221);
 }

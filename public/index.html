@@ -38,8 +38,8 @@
   <!-- Top nav bar (fixed) -->
   <nav>
     <span>tweeter</span>
-    <div class="new-tweet">
-      <a href="" class="tweet-pulldown"><b>Write</b> a new tweet</a>
+    <div class="show-new-tweet">
+      <label><b>Write</b> a new tweet</label>
       <i class="fas fa-angle-double-down"></i>
     </div>
   </nav>
@@ -55,24 +55,19 @@
   </header>
 
   <!-- Page-specific (main) content here -->
+  
   <main class="container">
     <section class="new-tweet">
       <div class="input-warning">
         <i class="fas fa-lg fa-exclamation-triangle"></i>
         <h3>Invalid Input! Please try again.</h3>
       </div>
-      <script type="text/javascript">
-          $(".input-warning").hide();
-      </script>
       <div class="length-warning">
         <i class="fas fa-lg fa-exclamation-triangle"></i>
         <h3>Too long! Please try again.</h3>
       </div>
-      <script type="text/javascript">
-        $(".length-warning").hide();
-    </script>
-      <h2>Compose Tweet</h2>
       <form method="POST" action="/tweets/" class="submit-tweet">
+        <h2>Compose Tweet</h2>
         <label for="tweet-text">What are you humming about?</label>
         <textarea name="text" class="tweet-input"></textarea>
         <div>
@@ -84,7 +79,7 @@
     <section class="tweets-container">
     </section>
   </main>
-  
+
   <!-- Char Counter JS -->
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 </body>

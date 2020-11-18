@@ -1,3 +1,7 @@
+.new-tweet {
+  display: none;
+}
+
 .new-tweet > form > textarea {
   text-decoration: none;
   border: none;
@@ -47,6 +51,7 @@
   border-radius: 8px;
   margin-top: 1em;
   background-color: rgb(255, 200, 97);
+  display: none;
 }
 
 .new-tweet > .input-warning > i,

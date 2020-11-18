@@ -3,9 +3,16 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
 $(document).ready(function() {
   submitTweet();
   loadTweets();
+  
+  $(".show-new-tweet").click(function() {
+    $(".new-tweet").toggle("slow", function() {
+      $(".tweet-input").focus();
+    });
+  })
 });
 
 const renderTweets = function(tweets) {
@@ -60,11 +67,11 @@ const submitTweet = function() {
     } else if ($input.val().length > 140) {
       e.preventDefault();
       $(".input-warning").hide();
-      $(".length-warning").slideDown("slow")
+      $(".length-warning").slideDown("slow").css({"display": "flex"});
     } else {
       e.preventDefault();
       $(".length-warning").hide();
-      $(".input-warning").slideDown("slow")
+      $(".input-warning").slideDown("slow").css({"display": "flex"});
     }
   });
 };
