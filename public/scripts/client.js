@@ -6,14 +6,14 @@
 $(document).ready(function() {
   submitTweet();
   loadTweets();
-})
+});
 
 const renderTweets = function(tweets) {
   const $container = $(document).find(".tweets-container");
   for (tweet of tweets) {
-    $container.append(createTweetElement(tweet));
+    $container.prepend(createTweetElement(tweet));
   }
-}
+};
 
 const createTweetElement = function(tweet) {
   let $tweet = $(`
@@ -37,7 +37,7 @@ const createTweetElement = function(tweet) {
   `);
   // to fix: day(s) condition for if more than 1 day
   return $tweet;
-}
+};
 
 const submitTweet = function() {
   const $submitForm = $(".submit-tweet");
@@ -46,10 +46,14 @@ const submitTweet = function() {
   $submitForm.submit(function(e) {
     if ($input.val() !== "" && $input.val().length <= 140) {
       e.preventDefault();
-      $.ajax({ 
+      $.ajax({
         method: 'POST',
         url: "/tweets",
         data: $(this).serialize(),
+      })
+      .then(function() {
+        $submitForm.trigger('reset');
+        loadTweets();
       })
     } else if ($input.val().length > 140) {
       e.preventDefault();
@@ -58,15 +62,15 @@ const submitTweet = function() {
       e.preventDefault();
       alert("invalid input");
     }
-  })
-}
+  });
+};
 
 const loadTweets = function() {
   $.ajax('/tweets', { method: 'GET' })
-  .then(function(data) {
-    renderTweets(data);
-  })
-}
+    .then(function(data) {
+      renderTweets(data);
+    })
+};
 
 function getDatePosted(datetime) {
   const d = new Date();

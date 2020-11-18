@@ -11,6 +11,6 @@ $(document).ready(function() {
     } else {
       $counter.val(MAX_CHARACTER_COUNT - value.length).css("color", "red");
     }
-  })
-})
+  });
+});
 
