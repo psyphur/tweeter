@@ -8,9 +8,11 @@
   padding-top: 1em;
   background-color: #97e7f7;
   background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
+  margin-top: 120px;
 }
 
 .main-header > div > h2 {
   color: #ffff;
 }
+
 
