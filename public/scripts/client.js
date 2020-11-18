@@ -19,11 +19,11 @@ const createTweetElement = function(tweet) {
   let $tweet = $(`
     <article class="tweet">
       <header>
-        <img class="avatar"" src="${tweet.user.avatars}">
-        <div class="growable">${tweet.user.name}</div>
-        <div class="username">${tweet.user.handle}</div>
+        <img class="avatar"" src="${escape(tweet.user.avatars)}">
+        <div class="growable">${escape(tweet.user.name)}</div>
+        <div class="username">${escape(tweet.user.handle)}</div>
       </header>
-      <p>${tweet.content.text}</p>
+      <p>${escape(tweet.content.text)}</p>
         <div class="separator"></div>
         <footer>
           <label class="date-posted">${getDatePosted(tweet.created_at)} days ago</label>
@@ -52,15 +52,19 @@ const submitTweet = function() {
         data: $(this).serialize(),
       })
       .then(function() {
+        $(".input-warning").slideUp("slow");
+        $(".length-warning").slideUp("slow");
         $submitForm.trigger('reset');
         loadTweets();
       })
     } else if ($input.val().length > 140) {
       e.preventDefault();
-      alert("too long!");
+      $(".input-warning").hide();
+      $(".length-warning").slideDown("slow")
     } else {
       e.preventDefault();
-      alert("invalid input");
+      $(".length-warning").hide();
+      $(".input-warning").slideDown("slow")
     }
   });
 };
@@ -71,6 +75,12 @@ const loadTweets = function() {
       renderTweets(data);
     })
 };
+
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
 
 function getDatePosted(datetime) {
   const d = new Date();

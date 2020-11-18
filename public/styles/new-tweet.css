@@ -36,3 +36,21 @@
   font-family: 'Bungee', sans-serif;
   font-size: 28px;
 }
+
+.new-tweet > .input-warning,
+.new-tweet > .length-warning {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid orange;
+  border-radius: 8px;
+  margin-top: 1em;
+  background-color: rgb(255, 200, 97);
+}
+
+.new-tweet > .input-warning > i,
+.new-tweet > .length-warning > i {
+  color: red;
+  padding-right: 0.5em;
+}
