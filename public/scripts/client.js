@@ -5,6 +5,7 @@
  */
 $(document).ready(function() {
   renderTweets(data);
+  submitTweet();
 })
 
 const renderTweets = function(tweets) {
@@ -34,9 +35,25 @@ const createTweetElement = function(tweet) {
         </footer>
     </article>
   `);
-
   // to fix: day(s) condition for if more than 1 day
   return $tweet;
+}
+
+const submitTweet = function() {
+  const $submitForm = $(".submit-tweet");
+  $submitForm.submit(function(e) {
+    e.preventDefault();
+    alert("submit called")
+    console.log($(this).serialize());
+    $.ajax({ 
+      method: 'POST',
+      url: "/tweets",
+      data: $(this).serialize(),
+    })
+    .then(function(data) {
+      console.log("success", data);
+    })
+  })
 }
 
 function getDatePosted(datetime) {
