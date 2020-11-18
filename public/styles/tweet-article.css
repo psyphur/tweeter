@@ -1,21 +1,21 @@
-.tweet-article {
+.tweet {
   display: flex;
   flex-direction: column;
   margin-top: 1em;
   border: 5px solid #494949;
 }
 
-.tweet-article:hover {
+.tweet:hover {
   box-shadow: 7px 7px#4056A1;
 }
 
-.tweet-article:hover header,
-.tweet-article:hover p,
-.tweet-article:hover footer > label {
+.tweet:hover header,
+.tweet:hover p,
+.tweet:hover footer > label {
   opacity: 1;
 }
 
-.tweet-article > header {
+.tweet > header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -26,34 +26,34 @@
   opacity: 0.7;
 }
 
-.tweet-article > header > div.growable {
+.tweet > header > div.growable {
   padding-left: 0.5em;
   flex-grow: 1;
 }
 
-.tweet-article > article > label {
+.tweet > article > label {
   display: flex;
   flex-direction: row;
   align-content: center;
 }
 
-.tweet-article > header > .username {
+.tweet > header > .username {
   visibility: hidden;
 }
 
-.tweet-article:hover header > .username {
+.tweet:hover header > .username {
   color: gray;
   visibility: visible;
 }
 
-.tweet-article > p {
+.tweet > p {
   font-size: 22px;
   font-weight: 100;
   padding: 1em;
   opacity: 0.7;
 }
 
-.tweet-article > footer {
+.tweet > footer {
   font-size: 16px;
   display: flex;
   flex-direction: row;
@@ -61,25 +61,25 @@
   font-weight: 100;
 }
 
-.tweet-article > footer > .date-posted {
+.tweet > footer > .date-posted {
   padding: 1em 2em;
 }
 
-.tweet-article > footer > label {
+.tweet > footer > label {
   opacity: 0.7;
 }
 
-.tweet-article > footer > .tweet-icons {
+.tweet > footer > .tweet-icons {
   padding: 0.5em 2em;
 }
 
-.tweet-article > footer > .tweet-icons > i {
+.tweet > footer > .tweet-icons > i {
   margin-top: 0;
   padding-left: 0.5em;
   color: #4056A1;
 }
 
-.tweet-article > .separator {
+.tweet > .separator {
   border-bottom: 5px solid #494949;
   margin: 0 0.5em;
 }
