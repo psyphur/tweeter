@@ -3,6 +3,7 @@
   flex-direction: column;
   margin-top: 1em;
   border: 5px solid #494949;
+  width: 100%;
 }
 
 .tweet:hover {
@@ -47,10 +48,12 @@
 }
 
 .tweet > p {
+  width: 100%;
   font-size: 22px;
   font-weight: 100;
   padding: 1em;
   opacity: 0.7;
+  word-wrap: break-word;
 }
 
 .tweet > footer {

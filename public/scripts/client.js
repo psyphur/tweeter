@@ -44,18 +44,20 @@ const submitTweet = function() {
   const $input = $submitForm.find(".tweet-input");
 
   $submitForm.submit(function(e) {
-    if ($input.val() !== "" && $input.val().length < 140) {
+    if ($input.val() !== "") {
       e.preventDefault();
       $.ajax({ 
         method: 'POST',
         url: "/tweets",
         data: $(this).serialize(),
       })
+    } else if ($input.val() !== "" && $input.val().length > 140) {
+      e.preventDefault();
+      alert("too long!");
     } else {
       e.preventDefault();
-      alert("input invalid");
+      alert("invalid input");
     }
-
   })
 }
 
