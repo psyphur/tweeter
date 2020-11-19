@@ -1,6 +1,6 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter is a simple, responsive, single-page Twitter clone.
 
 Users can compose a new tweet which will be rendered instantly below in the tweets section.
 
@@ -22,6 +22,7 @@ Users can compose a new tweet which will be rendered instantly below in the twee
 !["Screenshot of tweet composer"](https://github.com/psyphur/tweeter/blob/master/docs/tweet-composer.png?raw=true)
 !["Screen shot of composing a tweet"](https://github.com/psyphur/tweeter/blob/master/docs/compose-tweet.png?raw=true)
 !["Screen shot of tweet live render"](https://github.com/psyphur/tweeter/blob/master/docs/render-tweet.png?raw=true)
+!["Screen shot of tablet mode view"](https://github.com/psyphur/tweeter/blob/master/docs/tablet-mode-view.png?raw=true)
 
 ## Dependencies
 
