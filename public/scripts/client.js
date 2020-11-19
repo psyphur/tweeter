@@ -51,7 +51,8 @@ const submitTweet = function() {
   const $input = $submitForm.find(".tweet-input");
 
   $submitForm.submit(function(e) {
-    if ($input.val() !== "" && $input.val().length <= 140) {
+    const inputValue = $input.val().trim();
+    if (inputValue !== "" && $input.val().length <= 140) {
       e.preventDefault();
       $.ajax({
         method: 'POST',
