@@ -15,6 +15,13 @@ Users can compose a new tweet which will be rendered instantly below in the twee
 2. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 3. Go to <http://localhost:8080/> in your browser.
 
+## Screenshots 
+
+!["Screenshot of homepage"](https://github.com/psyphur/tweeter/blob/master/docs/homepage.png?raw=true)
+!["Screenshot of tweet composer"](https://github.com/psyphur/tweeter/blob/master/docs/tweet-composer.png?raw=true)
+!["Screen shot of composing a tweet"](https://github.com/psyphur/tweeter/blob/master/docs/compose-tweet.png?raw=true)
+!["Screen shot of tweet live render"](https://github.com/psyphur/tweeter/blob/master/docs/render-tweet.png?raw=true)
+
 ## Dependencies
 
 - Express
