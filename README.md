@@ -11,9 +11,10 @@ Users can compose a new tweet which will be rendered instantly below in the twee
 
 ## Getting Started
 
-1. Install dependencies using the `npm install` command.
-2. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-3. Go to <http://localhost:8080/> in your browser.
+1. Clone the repo.
+2. Install dependencies using the `npm install` command.
+3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
+4. Go to <http://localhost:8080/> in your browser.
 
 ## Screenshots 
 
