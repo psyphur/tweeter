@@ -36,11 +36,6 @@
   justify-content: space-between;
 }
 
-.counter {
-  font-family: 'Bungee', sans-serif;
-  font-size: 28px;
-}
-
 .new-tweet > .input-warning,
 .new-tweet > .length-warning {
   display: flex;
@@ -62,4 +57,9 @@
 
 .new-tweet > form > div > .submit-tweet {
   outline: none;
+}
+
+.counter {
+  font-family: 'Bungee', sans-serif;
+  font-size: 28px;
 }

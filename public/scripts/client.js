@@ -3,16 +3,17 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-
 $(document).ready(function() {
+  // Wait for DOM to be fully loaded before we start our function calls
   submitTweet();
   loadTweets();
   
+  // Automatically focuses the toggleable tweet composer
   $(".show-new-tweet").click(function() {
     $(".new-tweet").toggle("slow", function() {
       $(".tweet-input").focus();
     });
-  })
+  });
 });
 
 const renderTweets = function(tweets) {
@@ -42,7 +43,6 @@ const createTweetElement = function(tweet) {
         </footer>
     </article>
   `);
-  // to fix: day(s) condition for if more than 1 day
   return $tweet;
 };
 
@@ -58,13 +58,13 @@ const submitTweet = function() {
         url: "/tweets",
         data: $(this).serialize(),
       })
-      .then(function() {
-        $(".input-warning").slideUp("slow");
-        $(".length-warning").slideUp("slow");
-        $submitForm.trigger('reset');
-        loadTweets();
-        $(".tweet-input").focus();
-      })
+        .then(function() {
+          $(".input-warning").slideUp("slow");
+          $(".length-warning").slideUp("slow");
+          $submitForm.trigger('reset');
+          loadTweets();
+          $(".tweet-input").focus();
+        });
     } else if ($input.val().length > 140) {
       e.preventDefault();
       $(".input-warning").hide();
@@ -81,14 +81,15 @@ const loadTweets = function() {
   $.ajax('/tweets', { method: 'GET' })
     .then(function(data) {
       renderTweets(data);
-    })
+    });
 };
 
+// Escape function to prevent XSS attacks on tweet form
 const escape =  function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
-}
+};
 
 function getDatePosted(datetime) {
   const d = new Date();
@@ -96,5 +97,4 @@ function getDatePosted(datetime) {
   const timeDifference = d.getTime() - datePosted.getTime();
   return Math.round(timeDifference / (1000 * 3600 * 24));
 }
-
 

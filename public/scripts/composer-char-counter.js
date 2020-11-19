@@ -1,3 +1,4 @@
+// counter function to count user's input char count
 $(document).ready(function() {
   const $tweetInput = $(document).find(".tweet-input");
 

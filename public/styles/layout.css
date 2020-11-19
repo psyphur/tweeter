@@ -41,7 +41,7 @@ body>main {
   margin-bottom: 3em;
 }
 
-.scroll-top {
+body > div > .scroll-top {
   display: none;
   position: fixed;
   bottom: 20px;
@@ -57,7 +57,7 @@ body>main {
   font-size: 20px;
 }
 
-.scroll-top:hover {
+body > div > .scroll-top:hover {
   background-color: #4056A1;
 }
 

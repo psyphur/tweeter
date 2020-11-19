@@ -32,12 +32,6 @@
   flex-grow: 1;
 }
 
-.tweet > article > label {
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-}
-
 .tweet > header > .username {
   visibility: hidden;
 }
@@ -45,6 +39,12 @@
 .tweet:hover header > .username {
   color: gray;
   visibility: visible;
+}
+
+.tweet > article > label {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
 }
 
 .tweet > p {
