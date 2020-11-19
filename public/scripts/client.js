@@ -18,6 +18,7 @@ $(document).ready(function() {
 
 const renderTweets = function(tweets) {
   const $container = $(document).find(".tweets-container");
+  $container.empty();
   for (tweet of tweets) {
     $container.prepend(createTweetElement(tweet));
   }
