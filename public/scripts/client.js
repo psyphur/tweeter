@@ -63,6 +63,7 @@ const submitTweet = function() {
         $(".length-warning").slideUp("slow");
         $submitForm.trigger('reset');
         loadTweets();
+        $(".tweet-input").focus();
       })
     } else if ($input.val().length > 140) {
       e.preventDefault();

@@ -86,3 +86,11 @@
   border-bottom: 5px solid #494949;
   margin: 0 0.5em;
 }
+
+ /* Laptops / Desktops: minimum width of 1024px */
+ @media only screen and (min-width: 1024px) {
+  .container {
+    width: 50%;
+    margin-top: 200px;
+  }
+}

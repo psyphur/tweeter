@@ -59,3 +59,7 @@
   color: red;
   padding-right: 0.5em;
 }
+
+.new-tweet > form > div > .submit-tweet {
+  outline: none;
+}
