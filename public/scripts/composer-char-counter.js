@@ -2,7 +2,7 @@
 $(document).ready(function() {
   const $tweetInput = $(document).find(".tweet-input");
 
-  $($tweetInput).on('keyup', function() {
+  $($tweetInput).on('input', function() {
     const $counter = $(this).parent().find(".counter");
     const value = $(this).val();
     const MAX_CHARACTER_COUNT = 140;
